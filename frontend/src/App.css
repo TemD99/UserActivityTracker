@@ -1,0 +1,174 @@
+/* Import a modern font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* Define updated color variables for an enhanced dark theme */
+:root {
+  --text-primary: #d89eff;
+  --text-secondary: #c8c8c8;
+  --text-highlight: #8dad8c;
+  --card-background: #262626;
+  --background-main: #121212;
+  --border-color: #ffffff;
+  --accent-color: #3f51b5;
+}
+
+/* Body styling with a subtle gradient and smooth transition */
+body {
+  font-family: 'Roboto', sans-serif;
+  background: linear-gradient(45deg, #121212, #1e1e1e);
+  margin: 0;
+  padding: 0;
+  transition: background 0.3s ease;
+}
+
+/* Enhanced container with adjusted padding, margin, and rounded corners */
+.container {
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 30px;
+  background: var(--background-main);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+/* Header enhancements: larger text with subtle text-shadow for emphasis */
+.header {
+  text-align: center;
+  color: var(--text-primary);
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+/* Card styling with smooth hover lift effect */
+.card {
+  background: var(--card-background);
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  color: var(--text-primary);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7);
+}
+
+/* Controls section styling with improved buttons and input fields */
+.controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 5px;
+  padding: 5px;
+  color: var(--text-primary);
+}
+
+.controls input {
+  padding: 10px;
+  font-size: 14px;
+  width: 160px;
+  background: var(--card-background);
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
+  transition: border-color 0.3s ease;
+}
+
+.controls input:focus {
+  outline: none;
+  border-color: var(--accent-color);
+}
+
+.controls button {
+  background: #3f51b500;
+  color: rgba(255, 255, 255, 0);
+  border: none;
+  cursor: pointer;
+  font-size: 1px;
+  /* width: 50px; remove or comment this out */
+}
+
+
+.controls button:hover {
+  background: #303f9f;
+  transform: scale(1.05);
+}
+
+.controls img {
+  width: 100px;
+  height: 100px;
+}
+
+/* Summary grid: larger text and more generous padding for better readability */
+.summary-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  text-align: center;
+}
+
+.summary-grid .card {
+  font-size: 20px;
+  padding: 20px;
+}
+
+/* Charts container with responsive grid columns */
+.charts-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+/* Pie chart labels styling */
+.recharts-label-list text {
+  fill: var(--text-primary) !important;
+  font-size: 14px;
+}
+
+/* Long sessions list with refined list items */
+.long-sessions {
+  text-align: center;
+  color: var(--text-primary);
+}
+
+.long-sessions ul {
+  list-style: none;
+  padding: 0;
+}
+
+.long-sessions li {
+  background: #3a3a3a;
+  padding: 12px;
+  margin: 8px 0;
+  border-radius: 6px;
+  color: var(--text-secondary);
+  transition: background 0.3s ease;
+}
+
+.long-sessions li:hover {
+  background: #4a4a4a;
+}
+
+/* Responsive styles for smaller screens */
+@media (max-width: 768px) {
+  .summary-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .charts-container {
+    grid-template-columns: 1fr;
+  }
+
+  .controls {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .controls button {
+    padding: 5px;
+  }
+}
